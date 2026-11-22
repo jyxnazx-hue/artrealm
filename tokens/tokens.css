@@ -1,0 +1,118 @@
+:root {
+  /* Museum palette */
+  --espresso: #1e1510;
+  --walnut-dk: #2e2018;
+  --walnut: #4a3425;
+  --oak: #6b4c32;
+  --tan: #9a7650;
+  --sand: #c9aa82;
+  --cream: #f2e6c9;
+  --butter: #ebd9a5;
+  --glow: #f6d88c;
+  --gilt: #d3b66e;
+  --ivory: #faf3e0;
+
+  /* RGB channels keep every translucent surface within the same palette. */
+  --espresso-rgb: 30 21 16;
+  --walnut-dk-rgb: 46 32 24;
+  --walnut-rgb: 74 52 37;
+  --oak-rgb: 107 76 50;
+  --tan-rgb: 154 118 80;
+  --sand-rgb: 201 170 130;
+  --cream-rgb: 242 230 201;
+  --butter-rgb: 235 217 165;
+  --glow-rgb: 246 216 140;
+  --gilt-rgb: 211 182 110;
+  --ivory-rgb: 250 243 224;
+
+  /* Brief-specific cream-yellow sources and recessed paper. */
+  --light-wing-i: #f0cc7a;
+  --light-wing-ii: #f6d88c;
+  --light-wing-iii: #faedbe;
+  --light-wing-iv: #f6e2a8;
+  --light-wing-i-rgb: 240 204 122;
+  --light-wing-ii-rgb: 246 216 140;
+  --light-wing-iii-rgb: 250 237 190;
+  --light-wing-iv-rgb: 246 226 168;
+  --paper-recess: #e3d2ac;
+  --paper-recess-rgb: 227 210 172;
+
+  --font-museum: 'Alegreya', serif;
+  --stage-width: 1440px;
+  --stage-height: 900px;
+  --pavilion-width: 504px;
+  --pavilion-height: 324px;
+
+  /* Material, grain, and shadow limits. */
+  --grain-opacity: 0.035;
+  --paper-grain-opacity: 0.04;
+  --wall-texture-opacity: 0.32;
+  --floor-texture-opacity: 0.36;
+  --wood-texture-opacity: 0.3;
+  --shadow-soft: 0 10px 16px rgb(var(--espresso-rgb) / 0.45);
+  --shadow-frame: 0 2px 6px rgb(var(--espresso-rgb) / 0.45);
+  --shadow-label: 0 2px 6px rgb(var(--espresso-rgb) / 0.35);
+  --shadow-furniture: 0 6px 8px rgb(var(--espresso-rgb) / 0.3);
+  --highlight-edge: rgb(var(--ivory-rgb) / 0.12);
+  --vignette-strength: 0.35;
+
+  /* Lighting caps. */
+  --glow-cap-rest: 0.12;
+  --glow-cap-hover: 0.24;
+  --cove-spill-rest: 0.12;
+  --cove-spill-hover: 0.2;
+  --picture-light-opacity: 0.08;
+  --floor-glow-opacity: 0.06;
+  --door-lantern-rest: 0.08;
+  --door-lantern-prehover: 0.12;
+  --signature-lamp-prehover: 0.14;
+  --corridor-light-opacity: 0.1;
+  --dust-opacity: 0.05;
+  --pulse-trail-opacity: 0.1;
+  --cove-spill-size: 24px;
+
+  /* Rest and interaction values used by later phases. */
+  --work-saturation-rest: 0.85;
+  --work-saturation-hover: 1;
+  --room-dim-opacity: 0.3;
+  --room-dim-brightness: 0.88;
+  --unbuilt-wash-opacity: 0.4;
+  --focus-ring-opacity: 0.7;
+  --hover-brightness: 1.08;
+  --press-scale: 0.99;
+
+  /* Timing and motion. */
+  --duration-prehover: 120ms;
+  --duration-hover: 240ms;
+  --duration-exit: 160ms;
+  --duration-press: 80ms;
+  --duration-pulse: 400ms;
+  --duration-trail: 1200ms;
+  --duration-push-in: 1400ms;
+  --duration-push-back: 1100ms;
+  --duration-reduced: 300ms;
+  --duration-lamp-stagger: 250ms;
+  --duration-first-visit: 6000ms;
+  --ease-hover: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-press: cubic-bezier(0.2, 0, 0, 1);
+
+  /* Cursor parallax: displacement is clamped to +/-10px in Phase 2. */
+  --parallax-strength: 1;
+  --parallax-limit: 10px;
+  --parallax-floor: 0.2;
+  --parallax-back-wall: 0.3;
+  --parallax-architecture: 0.4;
+  --parallax-inner-wall: 0.4;
+  --parallax-works: 0.6;
+  --parallax-lights: 0.6;
+  --parallax-furniture: 1;
+  --parallax-front-lip: 1.2;
+  --parallax-sign: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --parallax-strength: 0;
+  }
+}
